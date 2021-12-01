@@ -115,6 +115,9 @@
     <ClCompile Include="Component\LightComponent.cpp">
       <Filter>Resources\Component</Filter>
     </ClCompile>
+    <ClCompile Include="Graphics\Model.cpp">
+      <Filter>Resources\Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework\EventSystem.h">
