@@ -112,6 +112,9 @@
     <ClCompile Include="Component\FreeCameraController.cpp">
       <Filter>Resources\Component</Filter>
     </ClCompile>
+    <ClCompile Include="Component\LightComponent.cpp">
+      <Filter>Resources\Component</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework\EventSystem.h">
@@ -220,6 +223,9 @@
       <Filter>Resources\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="Component\FreeCameraController.h">
+      <Filter>Resources\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\LightComponent.h">
       <Filter>Resources\Component</Filter>
     </ClInclude>
   </ItemGroup>

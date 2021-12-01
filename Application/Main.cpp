@@ -124,8 +124,19 @@ int main(int argc, char** argv)
 		scene->AddActor(std::move(actor));
 	}
 	
+	//lighting
+	auto shader = engine.Get<nc::ResourceSystem>()->Get<nc::Program>("light_shader");
+	shader->SetUniform("light.ambient", glm::vec3{ 0.2f });
+	shader->SetUniform("material.ambient", glm::vec3{ 1 });
+
+	shader->SetUniform("light.diffuse", glm::vec3{ 1 });
+	shader->SetUniform("material.diffuse", glm::vec3{ 1 });
+
+	shader->SetUniform("light.position", glm::vec4{ 4 , 4, 4, 1 });
+
 	glm::vec3 translate{ 0.0f };
 	float angle = 0;
+
 	bool quit = false;
 	while (!quit)
 	{
