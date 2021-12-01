@@ -27,7 +27,7 @@ namespace nc
 		friend class Texture;
 
 	private:
-		SDL_Renderer* renderer = nullptr;
+		SDL_GLContext context;
 		SDL_Window* window = nullptr;
 	};
 }

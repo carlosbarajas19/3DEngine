@@ -176,6 +176,8 @@
   <ItemGroup>
     <None Include="..\Build\Resources\Shaders\Basic.frag" />
     <None Include="..\Build\Resources\Shaders\Basic.vert" />
+    <None Include="..\Build\Resources\Shaders\Light.frag" />
+    <None Include="..\Build\Resources\Shaders\Light.vert" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Engine\Engine.vcxproj">

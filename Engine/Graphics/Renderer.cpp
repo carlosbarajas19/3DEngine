@@ -21,7 +21,7 @@ namespace nc
 	{
 		IMG_Quit();
 		TTF_Quit();
-		SDL_DestroyRenderer(renderer);
+		SDL_GL_DeleteContext(context);
 		SDL_DestroyWindow(window);
 		SDL_Quit();
 	}
@@ -49,7 +49,7 @@ namespace nc
 		SDL_GL_SetAttribute(SDL_GL_ACCELERATED_VISUAL, 1);
 		SDL_GL_SetSwapInterval(1);
 
-		SDL_GLContext context = SDL_GL_CreateContext(window);
+		context = SDL_GL_CreateContext(window);
 		if (!gladLoadGL())
 		{
 			SDL_Log("Failed to create OpenGL context");

@@ -28,6 +28,8 @@
 //graphics
 #include "Graphics/Renderer.h"
 #include "Graphics/Material.h"
+#include "Graphics/VertexBuffer.h"
+#include "Graphics/VertexIndexBuffer.h"
 
 //Physics System
 
@@ -39,6 +41,9 @@
 //components
 #include "Component/PhysicsComponent.h"
 #include "Component/AudioComponent.h"
+#include "Component/CameraComponent.h"
+#include "Component/MeshComponent.h"
+#include "Component/FreeCameraController.h"
 
 
 #define NOMINMAX

@@ -97,6 +97,21 @@
     <ClCompile Include="..\ThirdParty\glad\src\glad.c">
       <Filter>Resources\Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="Component\CameraComponent.cpp">
+      <Filter>Resources\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\MeshComponent.cpp">
+      <Filter>Resources\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\VertexBuffer.cpp">
+      <Filter>Resources\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\VertexIndexBuffer.cpp">
+      <Filter>Resources\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\FreeCameraController.cpp">
+      <Filter>Resources\Component</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework\EventSystem.h">
@@ -191,6 +206,21 @@
     </ClInclude>
     <ClInclude Include="Graphics\Material.h">
       <Filter>Resources\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\CameraComponent.h">
+      <Filter>Resources\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\MeshComponent.h">
+      <Filter>Resources\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\VertexBuffer.h">
+      <Filter>Resources\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\VertexIndexBuffer.h">
+      <Filter>Resources\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\FreeCameraController.h">
+      <Filter>Resources\Component</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

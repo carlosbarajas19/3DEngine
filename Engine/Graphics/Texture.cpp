@@ -15,17 +15,16 @@ namespace nc
 
     bool Texture::CreateTexture(const std::string& filename, GLenum target, GLuint unit)
     {
-        target = target;
-        unit = unit;
+        this->target = target;
+        this->unit = unit;
 
         SDL_Surface* surface = IMG_Load(filename.c_str());
-        FlipSurface(surface);
-
         if (surface == nullptr)
         {
             SDL_Log("Failed to create surface: %s", SDL_GetError());
             return false;
         }
+        FlipSurface(surface);
 
         glGenTextures(1, &texture);
         glBindTexture(target, texture);
