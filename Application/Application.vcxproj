@@ -174,9 +174,12 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\Build\Resources\Materials\spot.mtl" />
+    <None Include="..\Build\Resources\Materials\wood.mtl" />
     <None Include="..\Build\Resources\Shaders\Basic.frag" />
     <None Include="..\Build\Resources\Shaders\Basic.vert" />
     <None Include="..\Build\Resources\Shaders\Light.frag" />
+    <None Include="..\Build\Resources\Shaders\Light.shdr" />
     <None Include="..\Build\Resources\Shaders\Light.vert" />
   </ItemGroup>
   <ItemGroup>

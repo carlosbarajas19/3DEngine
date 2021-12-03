@@ -38,7 +38,7 @@ void main()
     //diffuse
     vec3 vnormal = mat3(model_view) * normal;
     vec4 vposition = model_view * vec4(position, 1);
-    vec3 light_dir = vec3(light.position - vposition);
+    vec3 light_dir = normalize(vec3(light.position - vposition));
 
     float intensity = max(dot(light_dir, vnormal), 0);
     vec3 diffuse = material.diffuse * light.diffuse * intensity;
@@ -54,7 +54,7 @@ void main()
         specular = material.specular * light.specular * intensity;
     }
 
-    fs_color = ambient + diffuse + specular;
+    fs_color = ambient + diffuse + specular ;
     fs_texcoord = texcoord;
     gl_Position = projection * view * model * vec4(position, 1.0);
 }
