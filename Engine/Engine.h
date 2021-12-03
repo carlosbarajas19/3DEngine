@@ -1,6 +1,7 @@
 #pragma once
 
 #define REGISTER_CLASS(class) nc::ObjectFactory::Instance().Register<class>(#class);
+#define CREATE_ENGINE_OBJECT(class) nc::ObjectFactory::Instance().Create<nc::class>(#class);
 
 //systems
 #include "Audio/AudioSystem.h"
@@ -30,6 +31,7 @@
 #include "Graphics/Material.h"
 #include "Graphics/VertexBuffer.h"
 #include "Graphics/VertexIndexBuffer.h"
+#include "Graphics/Model.h"
 
 //Physics System
 
@@ -45,6 +47,7 @@
 #include "Component/MeshComponent.h"
 #include "Component/FreeCameraController.h"
 #include "Component/LightComponent.h"
+#include "Component/ModelComponent.h"
 
 
 #define NOMINMAX

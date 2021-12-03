@@ -118,6 +118,9 @@
     <ClCompile Include="Graphics\Model.cpp">
       <Filter>Resources\Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="Component\ModelComponent.cpp">
+      <Filter>Resources\Component</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework\EventSystem.h">
@@ -229,6 +232,12 @@
       <Filter>Resources\Component</Filter>
     </ClInclude>
     <ClInclude Include="Component\LightComponent.h">
+      <Filter>Resources\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Model.h">
+      <Filter>Resources\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\ModelComponent.h">
       <Filter>Resources\Component</Filter>
     </ClInclude>
   </ItemGroup>

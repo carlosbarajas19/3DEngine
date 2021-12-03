@@ -77,7 +77,10 @@ int main(int argc, char** argv)
 	vertexBuffer->SetAttribute(2, 2, 8 * sizeof(float), 6 * sizeof(float));
 
 	// texture
-	auto texture = engine.Get<nc::ResourceSystem>()->Get<nc::Texture>("textures/llama.jpg");
+	/*auto texture = engine.Get<nc::ResourceSystem>()->Get<nc::Texture>("textures/llama.jpg");
+	texture->Bind();*/
+
+	auto texture = engine.Get<nc::ResourceSystem>()->Get<nc::Texture>("textures/spot.png");
 	texture->Bind();
 
 
@@ -90,7 +93,7 @@ int main(int argc, char** argv)
 
 	// create camera
 	{
-		auto actor = nc::ObjectFactory::Instance().Create<nc::Actor>("Actor");
+		auto actor = CREATE_ENGINE_OBJECT(Actor);
 		actor->name = "camera";
 		actor->transform.position = glm::vec3{ 0, 0, 5 };
 
@@ -112,13 +115,19 @@ int main(int argc, char** argv)
 
 	// create cube
 	{
-		auto actor = nc::ObjectFactory::Instance().Create<nc::Actor>("Actor");
+		auto actor = CREATE_ENGINE_OBJECT(Actor);
 		actor->name = "cube";
-		actor->transform.position = glm::vec3{ 0, 0, 0 };
+		actor->transform.position = glm::vec3{ 0 };
+		actor->transform.scale = glm::vec3{ 1 };
 
-		auto component = nc::ObjectFactory::Instance().Create<nc::MeshComponent>("MeshComponent");
+		/*auto component = nc::ObjectFactory::Instance().Create<nc::MeshComponent>("MeshComponent");
 		component->program = engine.Get<nc::ResourceSystem>()->Get<nc::Program>("light_shader");
-		component->vertexBuffer = engine.Get<nc::ResourceSystem>()->Get<nc::VertexIndexBuffer>("cube_mesh");
+		component->vertexBuffer = engine.Get<nc::ResourceSystem>()->Get<nc::VertexIndexBuffer>("cube_mesh");*/
+
+		auto component = nc::ObjectFactory::Instance().Create<nc::ModelComponent>("ModelComponent");
+		component->program = engine.Get<nc::ResourceSystem>()->Get<nc::Program>("light_shader");
+		component->model = engine.Get<nc::ResourceSystem>()->Get<nc::Model>("models/spot.obj");
+
 
 		actor->AddComponent(std::move(component));
 		scene->AddActor(std::move(actor));
